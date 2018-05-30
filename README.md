@@ -1,4 +1,4 @@
-# WIP! The photo searching application using [Flickr API](https://www.flickr.com/services/api/)
+## The photo searching application using [Flickr API](https://www.flickr.com/services/api/)
 
 ### APP
 
