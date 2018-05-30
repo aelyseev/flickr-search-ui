@@ -1,0 +1,13 @@
+.d {
+  &__img {
+    img {
+      max-height: 90vh;
+      max-width: 90vw;
+    }
+  }
+
+  &__url {
+    font-size: 0.8em;
+    margin-top: 0.5em;
+  }
+}

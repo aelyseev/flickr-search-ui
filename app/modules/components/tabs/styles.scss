@@ -1,0 +1,53 @@
+@import "~assets/styles/constants/index.scss";
+
+.t {
+  $ctx: &;
+
+  align-items: center;
+  display: flex;
+
+  &__item,
+  &__item-separator {
+    color: $gray-3;
+  }
+
+  &__item,
+  &__item-favorites,
+  &__item-create {
+    cursor: pointer;
+  }
+
+  &__item {
+    &:hover:not(#{$ctx}__item-favorites) {
+      color: $gray-4;
+    }
+  }
+
+  &__item-separator {
+    padding: 0 1em;
+  }
+
+  &__item-favorites {
+    a {
+      color: $main-red;
+      text-decoration: none;
+
+      &:hover {
+        color: darken($main-red, 10%);
+      }
+    }
+  }
+
+  &__item-create {
+    span {
+      opacity: 0;
+      transition: opacity $microinteraction-fast-duration ease-in-out;
+    }
+
+    &:hover {
+      span {
+        opacity: 1;
+      }
+    }
+  }
+}

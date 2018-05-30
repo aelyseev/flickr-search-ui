@@ -1,0 +1,25 @@
+.portal {
+  &__overlay {
+    align-items: center;
+    background: rgba(20, 20, 20, 0.9);
+    display: flex;
+    height: 100%;
+    left: 0;
+    position: fixed;
+    top: 0;
+    width: 100%;
+    z-index: 100;
+  }
+
+  &__content {
+    background: #fff;
+    margin: 0 auto;
+    min-height: 100px;
+    min-width: 300px;
+    padding: 2rem;
+  }
+
+  &__no-scroll {
+    overflow: hidden;
+  }
+}

@@ -1,0 +1,37 @@
+@import '~assets/styles/constants/index';
+
+.c {
+  /* keep */
+
+  &__label {
+    color: $gray-3;
+    padding: 0 0 0.2em 0.4em;
+  }
+
+  &__error {
+    color: lighten($main-red, 30%);
+    font-size: 0.8em;
+    padding: 0.2em 0 0 0.4em;
+  }
+}
+
+.input {
+  border: 1px solid $gray-2;
+  border-radius: 6px;
+  color: $black;
+  font-family: 'Roboto Mono', Helvetica, sans-serif;
+  font-size: 1.4em;
+  outline: none;
+  padding: 0.4em;
+  transition: box-shadow 300ms ease-in-out;
+  width: 100%;
+
+  &--error {
+    border-color: lighten($main-red, 30%);
+  }
+
+  &:focus {
+    border-color: $link;
+    box-shadow: 0 0 5px rgba($link, 0.3);
+  }
+}

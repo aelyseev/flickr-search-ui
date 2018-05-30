@@ -1,0 +1,13 @@
+@import "~assets/styles/constants/index";
+
+.layout {
+  /*! keep */
+
+  &__content {
+    background: $white;
+    border-top: 1px solid $white;
+    min-height: 400px;
+    position: relative;
+    z-index: $z-index-layout-content;
+  }
+}

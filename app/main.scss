@@ -1,0 +1,19 @@
+@import "~assets/styles/constants/index";
+
+body {
+  background-color: #fff;
+  font-family: 'Roboto Mono', Helvetica, sans-serif;
+}
+
+a:link {
+  color: $link;
+}
+
+a:visited {
+  color: $link-visited;
+}
+
+a:hover,
+a:active {
+  color: $link-active;
+}

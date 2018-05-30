@@ -1,0 +1,32 @@
+@import '~assets/styles/constants/index.scss';
+
+.s {
+  &__input {
+    background: $gray-0;
+    border: none;
+    font-size: 2em;
+    min-width: 70%;
+    outline: none;
+
+    &:focus {
+      background: $white;
+    }
+  }
+
+  &__filter {
+    align-items: center;
+    color: $gray-3;
+    display: flex;
+    flex-direction: row;
+    font-size: 0.8em;
+    margin-top: 1em;
+  }
+
+  &__filter-v {
+    margin-right: 0.7em;
+  }
+
+  &__filter-l {
+    margin-right: 4em;
+  }
+}
