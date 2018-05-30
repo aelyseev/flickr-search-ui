@@ -7,7 +7,7 @@
     "test": "cross-env NODE_ENV=test jest --no-cache",
     "build": "cross-env NODE_ENV=production webpack",
     "build:analyze-bundle": "cross-env NODE_ENV=production webpack",
-    "deploy": "cross-env NODE_ENV=production webpack",
+    "deploy": "yarn build && gh-pages -d dist",
     "lint": "eslint \"app/**/*.js\" \"app/**/*.jsx\" --fix --cache --cache-location \"./.cache/\"",
     "lint:fix": "yarn lint --fix",
     "stylelint": "stylelint \"app/**/*.scss\"",

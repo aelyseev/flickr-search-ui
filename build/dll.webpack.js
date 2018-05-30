@@ -5,7 +5,7 @@ import HTMLExternalAssetsPlugin from './plugins/html-external-assets-plugin';
 
 import {paths, uglifyOptions} from './constants';
 
-const {assetsManifest, dllManifest, dist, publicPath} = paths;
+const {assetsManifest, dllManifest, dist} = paths;
 
 const shim = {
   name: 'shim',
@@ -15,7 +15,7 @@ const shim = {
   output: {
     filename: '[name].[hash].js',
     path: dist,
-    publicPath,
+    publicPath: '',
     chunkFilename: '[name].[hash].js',
   },
   plugins: [
@@ -34,7 +34,7 @@ const vendors = {
   },
   output: {
     path: dist,
-    publicPath,
+    publicPath: '',
     filename: 'vendor.[hash].js',
     library: 'vendor__[hash]',
   },
