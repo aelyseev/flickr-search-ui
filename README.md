@@ -34,7 +34,7 @@ yarn install
 yarn build
 ```
 
-## Deploy to gh-page
+## Deploy to gh-pages
 
 
 ```
