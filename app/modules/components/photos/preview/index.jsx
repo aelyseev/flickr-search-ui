@@ -8,6 +8,8 @@ import {getIsPhotoInFavorites, addToFavorites, removeFromFavorites} from 'store/
 
 import Portal from 'modules/components/portal';
 
+import {sortBy} from 'lodash';
+
 import styleNames from 'modules/style-names';
 import styles from './styles.scss';
 
@@ -63,6 +65,7 @@ export default class Preview extends React.Component {
 
   render() {
     const {photo, inFavorites} = this.props;
+    const maxSize = sortBy(photo.sizes, ({width, height}) => width + height).pop();
     return (
       <div className={sn('p')}>
         <div
@@ -80,7 +83,7 @@ export default class Preview extends React.Component {
         </div>
         <div className={sn('p__desc')}>{photo.title}</div>
         <Portal visibility={this.state.preview} requestToClose={this.closePreview}>
-          <Details photo={photo} />
+          <Details title={photo.title} source={maxSize.source} url={maxSize.url} />
         </Portal>
       </div>
     );
