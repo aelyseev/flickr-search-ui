@@ -106,7 +106,14 @@ export const getPhotos = createSelector(
   getAllPhotos,
   getFilter,
   (photos, filter) =>
-    filter === 0 ? photos : photos.filter((photo) => photo.sizes.reverse().some(({width, height}) => width >= filter || height >= filter))
+    filter === 0
+      ? photos
+      : photos.filter((photo) =>
+          photo.sizes
+            .slice()
+            .reverse()
+            .some(({width, height}) => width >= filter || height >= filter)
+        )
 );
 
 export const getTotal = createSelector(getSearch, (search) => search.total);
